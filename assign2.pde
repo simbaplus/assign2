@@ -81,7 +81,7 @@ void draw() {
       case GAME_RUN:
   
         //背景移動效果
-        image(backgroundImage2,0+(backgroundPos%(width*2),0);
+        image(backgroundImage2,0+(backgroundPos%(width*2),0));
         image(backgroundImage,0+(backgroundPos%(width*2))-width,0);
         
         //紅色血條
