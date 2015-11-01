@@ -17,8 +17,8 @@ int treasurePosX,treasurePosY;
 int shipCurrentPosX,shipCurrentPosY;
 int blood;
 
-int backgroundPos=width;//存放背景當前位置
-
+int backgroundPos1=width;//存放背景當前位置
+int backgroundPos2=0;
 void setup () {
   
   size(640,480);
@@ -81,8 +81,8 @@ void draw() {
       case GAME_RUN:
   
         //背景移動效果
-        image(backgroundImage,backgroundPos%(width*2),0);
-        image(backgroundImage2,backgroundPos%(width*2)-width,0);
+        image(backgroundImage,backgroundPos1%(width*2)-width,0);
+        image(backgroundImage2,backgroundPos2%(width*2)-width,0);
         
         //紅色血條
         rect(15,15,blood,25);
@@ -94,7 +94,8 @@ void draw() {
         image(shipImage,shipCurrentPosX, shipCurrentPosY);
         
         //背景,敵機自動移動
-        backgroundPos++;
+        backgroundPos1++;
+        backgroundPos2++;
         enemyPosX++;
         
         
