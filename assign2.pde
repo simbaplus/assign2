@@ -158,8 +158,10 @@ void draw() {
             //主角初始位置
             shipCurrentPosX=width-65;
             shipCurrentPosY=height/2;
-            blood=100;//initialize blood 先假定100
-          
+            blood=40;
+            
+            backgroundPos1=width;//存放背景當前位置
+            backgroundPos2=0;
           
           
         }else{
