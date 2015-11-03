@@ -1,3 +1,5 @@
+
+
 final int GAME_START = 0; //<>//
 final int GAME_RUN = 1;
 final int GAME_WIN = 2;
@@ -17,8 +19,8 @@ int treasurePosX,treasurePosY;
 int shipCurrentPosX,shipCurrentPosY;
 int blood;
 
-int backgroundPos1=width;//存放背景當前位置
-int backgroundPos2=0;
+int backgroundPos1;//存放背景當前位置
+int backgroundPos2;
 void setup () {
   
   size(640,480);
@@ -30,6 +32,10 @@ void setup () {
   //結束圖片切換
   endUnHover=loadImage("img/end1.png");
   endHover=loadImage("img/end2.png");
+  
+  backgroundPos1=width;
+  backgroundPos2=0;
+  
   
   
   //載入物品
@@ -178,17 +184,17 @@ void keyPressed(){
  // To make ship move faster,I adjust the dispacement to +-3
   //上下左右 及 加減圖片尺寸
   if (keyCode == UP&shipCurrentPosY>=0) {
-    shipCurrentPosY-=3;
+    shipCurrentPosY-=4;
 
   }
    if (keyCode == DOWN&shipCurrentPosY<=height-61) {
-    shipCurrentPosY+=3;
+    shipCurrentPosY+=4;
   }
    if (keyCode == LEFT&shipCurrentPosX>=0) {
-    shipCurrentPosX-=3;
+    shipCurrentPosX-=4;
   }
    if (keyCode == RIGHT&shipCurrentPosX<=width-61) {
-    shipCurrentPosX+=3;
+    shipCurrentPosX+=4;
   }  
 }
 void keyReleased(){
